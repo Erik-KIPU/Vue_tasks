@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>{{ name }}</div> <!-- Выводим имя -->
-    <div>{{ surn }}</div> <!-- Выводим фамилию -->
+    <!-- Вывод суммы элементов объекта -->
+    <p>Сумма элементов объекта: {{ sum }}</p>
   </div>
 </template>
 
@@ -9,10 +9,16 @@
 export default {
   data() {
     return {
-      name: 'john',
-      surn: 'smit',
+      obj: { x: 1, y: 2, z: 3 }, // Объект с числами
     };
+  },
+  computed: {
+    // Вычисляем сумму значений объекта
+    sum() {
+      return Object.values(this.obj).reduce((acc, curr) => acc + curr, 0);
+    },
   },
 };
 </script>
+
 
