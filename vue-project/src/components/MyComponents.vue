@@ -1,18 +1,14 @@
 <template>
-  <div>
-    <div>{{ name }}</div> <!-- Выводим имя -->
-    <div>{{ surn }}</div> <!-- Выводим фамилию -->
-  </div>
+  <a :href="href">{{ text }}</a>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      name: 'john',
-      surn: 'smit',
+      text: 'page',
+      href: 'page.html',
     };
   },
 };
 </script>
-
